@@ -40,7 +40,7 @@ st.write("---")
 
 # 입력값을 변수로 받아서 사용 가능!
 
-with st.echo(code_location="below"):
+with st.echo(code_location="above"):
     # 나이 입력 (숫자)
     age = st.slider( #number_input
         label="나이", # 상단 표시되는 이름
