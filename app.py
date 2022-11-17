@@ -45,8 +45,8 @@ with st.echo(code_location="below"):
     age = st.slider( #number_input
         label="나이", # 상단 표시되는 이름
         min_value=1, # 최솟값
-        max_value=99 # 최댓값
-        # step=1, # 입력 단위
+        max_value=99, # 최댓값
+        step=1, # 입력 단위
         # value=30 # 기본값
     )
 
@@ -71,7 +71,7 @@ with st.echo(code_location="below"):
 
 with st.echo(code_location="below"):
     # 자녀 수 입력 (숫자)
-    children = st.number_input(
+    children = st.slider(
         label="자녀수", # 상단 표시되는 이름
         min_value=0, # 최솟값
         max_value=99, # 최댓값
@@ -89,7 +89,7 @@ with st.echo(code_location="below"):
 
 with st.echo(code_location="below"):
     # 지역 입력 (Select Box)
-    region = st.selectbox(
+    region = st.radio(
         label="지역", # 상단 표시되는 이름
         options=["북동", "북서", "남동", "남서"] # 선택 가능한 옵션들
         # index=2 # 기본 선택 인덱스
@@ -106,7 +106,7 @@ st.write("---") # 구분선
 with st.echo(code_location="below"):
     # 실행 버튼이 눌리면 모델을 불러와서 예측한다
     if play_button:
-        st.balloons() # 풍선 애니메이션 표시
+        st.success('This is a success message!', icon="✅") # 풍선 애니메이션 표시
         input_values = [[age, bmi, children, smoker, sex == "남성", region == "북서", region == "북동", region == "남서" ]]
         pred = model.predict(input_values)
         # st.write(pred[0])
