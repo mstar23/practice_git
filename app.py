@@ -27,9 +27,9 @@ st.write('* 데이터프레임 상위 5개만 show')
 st.write(df.head()) # 자동으로 표 그려줌
 # st.table(df) # 이걸로 그려도 됨
 
-st.write("# 모델 통해 예측해 보기")
+st.write("### 모델 통해 예측해 보기")
 
-with st.echo(code_location="below"):
+with st.echo(code_location='above'): #above / below
     import joblib
     model_path = f"{os.path.dirname(os.path.abspath(__file__))}/model.pkl"
     model = joblib.load(model_path)
