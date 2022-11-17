@@ -9,6 +9,7 @@ def get_image(image_name):
 
 get_image("insurance.png") # https://www.canva.com/
 
+st.write('이제 연동됐나?')
 st.write(
     """
     # 코드 & 데이터
