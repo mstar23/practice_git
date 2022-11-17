@@ -7,25 +7,24 @@ def get_image(image_name):
     image = Image.open(image_path) # 경로와 확장자 주의!
     st.image(image)
 
-get_image("insurance.png") # https://www.canva.com/
+# get_image("insurance.png") # https://www.canva.com/
 
-st.write('이제 연동됐나?')
-st.write(
-    """
-    # 코드 & 데이터
-    * [Colab 노트북](https://colab.research.google.com/drive/14QXhTVyMeo9vE6rEk2Q8cmcybsMgtV4k?usp=sharing)
-    * 사용한 데이터 (insurance.csv)
-        * 출처 : https://www.kaggle.com/datasets/awaiskaggler/insurance-csv
-    * 실행 결과 : <https://qus0in-streamlit-example-01-linear-regressionapp-bnlrbe.streamlit.app/>
-    """
-)
+# st.write(
+#     """
+#     # 코드 & 데이터
+#     * [Colab 노트북](https://colab.research.google.com/drive/14QXhTVyMeo9vE6rEk2Q8cmcybsMgtV4k?usp=sharing)
+#     * 사용한 데이터 (insurance.csv)
+#         * 출처 : https://www.kaggle.com/datasets/awaiskaggler/insurance-csv
+#     * 실행 결과 : <https://qus0in-streamlit-example-01-linear-regressionapp-bnlrbe.streamlit.app/>
+#     """
+# )
 
 import pandas as pd # 판다스 불러오기
 data_url = "https://raw.githubusercontent.com/bigdata-young/bigdata_16th/main/data/insurance.csv"
 df = pd.read_csv(data_url) # URL로 CSV 불러오기
 
-st.write(df) # 자동으로 표 그려줌
-# st.table(df) # 이걸로 그려도 됨
+# st.write(df) # 자동으로 표 그려줌
+st.table(df) # 이걸로 그려도 됨
 
 st.write("# 모델 통해 예측해 보기")
 
