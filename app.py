@@ -18,7 +18,7 @@ def get_image(image_name):
 #     * 실행 결과 : <https://qus0in-streamlit-example-01-linear-regressionapp-bnlrbe.streamlit.app/>
 #     """
 # )
-
+st.write('로컬 git 파일에 새로운 파일을 만든 후 터미널에서 git add 해주면 github에 파일 생성 된다😉')
 import pandas as pd # 판다스 불러오기
 data_url = "https://raw.githubusercontent.com/bigdata-young/bigdata_16th/main/data/insurance.csv"
 df = pd.read_csv(data_url) # URL로 CSV 불러오기
