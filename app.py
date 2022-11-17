@@ -29,7 +29,7 @@ st.write(df.head()) # 자동으로 표 그려줌
 
 st.write("### 모델 통해 예측해 보기")
 
-with st.echo(code_location='below'): #above / below
+with st.echo(code_location='below'): #above / below --> 코드를 보이냐 숨기냐 차이인가? above하면 코드까지 보여짐
     import joblib
     model_path = f"{os.path.dirname(os.path.abspath(__file__))}/model.pkl"
     model = joblib.load(model_path)
@@ -42,7 +42,7 @@ st.write("---")
 
 with st.echo(code_location="below"):
     # 나이 입력 (숫자)
-    age = st.number_input(
+    age = st.slider( #number_input
         label="나이", # 상단 표시되는 이름
         min_value=1, # 최솟값
         max_value=99, # 최댓값
